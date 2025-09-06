@@ -11,7 +11,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     permissions:
       contents: read #This is required for actions/checkout
 
@@ -27,7 +27,7 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
+        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -36,7 +36,7 @@ jobs:
           path: ${{env.DOTNET_ROOT}}/myapp
 
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     needs: build
     permissions:
       id-token: write #This is required for requesting the JWT
@@ -51,9 +51,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_DCAFBA21F6B9495E926CDF32D611A0DB }}
-          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_5D653097259F4C8FB2E6A401B2531E70 }}
-          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_1FB2299CCFE544BABFFF4A4322B40148 }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_B9E7476699044D37A545B6D1222F76E2 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_81C44EFD1CD540EAAFF02ABD79E927B4 }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_EE9E12D93F574FBDA378A94C4EEA549E }}
 
       - name: Deploy to Azure Web App
         id: deploy-to-webapp
