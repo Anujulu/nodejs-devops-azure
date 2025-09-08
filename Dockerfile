@@ -30,7 +30,7 @@ COPY --from=dependencies --chown=nodeuser:nodejs /app/node_modules ./node_module
 
 # Copy application code with proper ownership
 COPY --chown=nodeuser:nodejs package*.json ./
-COPY --chown=nodeuser:nodejs app.js ./
+COPY --chown=nodeuser:nodejs src/ ./src/
 
 # Switch to non-root user
 USER nodeuser
