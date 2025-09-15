@@ -238,6 +238,7 @@ How to connect and push:
 
   # Push your code to GitHub for the first time
   git push -u origin main
+  
 10. Kubernetes Deployments
 Create environment folders:
 
