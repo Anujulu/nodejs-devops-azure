@@ -1,15 +1,14 @@
 {
-        "name": "nodejs-azure-devops",
+        "name": "nodejs-devops-azure",
         "version": "1.0.0",
         "description": "DevOps learning project with Node.js",
-        "main": "src/index.js",
-      "scripts": {
-              "build": "tsc",
-              "start": "node dist/index.js",
-              "test": "jest"
-      },
-
-
+        "main": "app.js",
+        "scripts": {
+                "start": "node app.js",
+                "test": "jest",
+                "dev": "node app.js",
+                "lint": "eslint ."
+        },
         "keywords": [
                 "devops",
                 "nodejs",
@@ -23,7 +22,6 @@
         "devDependencies": {
                 "eslint": "^8.57.1",
                 "jest": "^29.7.0",
-                "supertest": "^7.1.4",
-                "typescript": "^5.9.2"
+                "supertest": "^7.1.4"
         }
 }

@@ -1,3 +1,4 @@
+# Fixed and Verified Multi-stage build for optimized image
 FROM node:20-alpine AS dependencies
 
 # Update packages for security (Alpine 3.19+ automatically)
@@ -30,7 +31,7 @@ COPY --from=dependencies --chown=nodeuser:nodejs /app/node_modules ./node_module
 
 # Copy application code with proper ownership
 COPY --chown=nodeuser:nodejs package*.json ./
-COPY --chown=nodeuser:nodejs src/ ./src/
+COPY --chown=nodeuser:nodejs app.js ./
 
 # Switch to non-root user
 USER nodeuser
@@ -46,4 +47,4 @@ HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
 ENTRYPOINT ["dumb-init", "--"]
 
 # Start application
-CMD ["npm", "start"]
+CMD ["npm", "start"]  

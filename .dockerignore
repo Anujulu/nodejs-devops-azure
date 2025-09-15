@@ -1,22 +1,22 @@
 node_modules 
-npm-debug.log
+npm-debug
+.log* 
 .git 
 .github 
 .env 
-.env
-.local 
-.env
-.local logs 
-.log coverage 
+.env.local 
+.env.*.local 
+logs 
+*.log 
+coverage 
 .nyc_output 
 .vscode 
 .idea 
-.swp 
-.swo 
+*.swp 
+*.swo 
 .DS_Store 
-Thumbs
-.db 
+Thumbs.db 
 README.md 
-tests/ jest
-.config.js 
-.eslintrc
+tests/ 
+jest.config.js 
+.eslintrc*

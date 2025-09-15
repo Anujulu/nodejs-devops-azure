@@ -11,14 +11,14 @@ const server = http.createServer((req, res) => {
   requestCount++;
   const timestamp = new Date().toISOString();
   const { pathname } = url.parse(req.url, true);
-  
+
   console.log(`${timestamp} - ${req.method} ${pathname} - ${req.headers['user-agent'] || 'Unknown'}`);
 
   // CORS headers
   res.setHeader('Access-Control-Allow-Origin', '*');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
-  
+
   // Security headers
   res.setHeader('X-Content-Type-Options', 'nosniff');
   res.setHeader('X-Frame-Options', 'DENY');
@@ -42,30 +42,30 @@ const server = http.createServer((req, res) => {
         </head>
         <body>
           <div class="header">
-            <h1> Node.js DevOps Pipeline, Docker, CI/CD, Kubernetes, Azure </h1>
+            <h1> Node.js DevOps Pipeline – Docker, CI/CD, Kubernetes, Azure </h1>
             <h2>Built by Izuabueke</h2>
             </div>
-            <p>This project demonstrates a complete end-to-end DevOps workflow by building and deploying a modern Node.js web application. It covers the full lifecycle of application development, from writing and testing code, to containerizing with Docker, automating pipelines with GitHub Actions, and deploying workloads to Kubernetes environments for both staging and production.
+            <p>This project demonstrates a complete end-to-end DevOps workflow by building and deploying a modern **Node.js web application**. It covers the full lifecycle of application development, from writing and testing code, to containerizing with **Docker**, automating pipelines with **GitHub Actions**, and deploying workloads to **Kubernetes** environments for both staging and production.
 
-As part of this implementation, the application is also hosted on Azure Web App, showcasing how cloud-native platforms can be leveraged for scalable and reliable application delivery. By combining local development with containerization and CI/CD automation, and extending deployments into Kubernetes clusters and Azure services, this project provides a practical demonstration of modern DevOps practices.</p>
+As part of this implementation, the application is also **hosted on Azure Web App**, showcasing how cloud-native platforms can be leveraged for scalable and reliable application delivery. By combining local development with containerization and CI/CD automation, and extending deployments into Kubernetes clusters and Azure services, this project provides a practical demonstration of modern DevOps practices.</p>
 
-<p>Key features of this project include:
+<p>**Key features of this project include:**
 
-<p>Building a Node.js application with testing (Jest, Supertest) and linting (ESLint).</p>
+- Building a Node.js application with testing (Jest, Supertest) and linting (ESLint).
 
-<p>Containerizing the app using Docker and orchestrating services with Docker Compose.</p>
+- Containerizing the app using Docker and orchestrating services with Docker Compose.
 
-<p>Automating builds, tests, and deployments with GitHub Actions CI/CD pipelines.</p>
+- Automating builds, tests, and deployments with GitHub Actions CI/CD pipelines.
 
-<p>Deploying to Kubernetes clusters for staging and production environments.</p>
+- Deploying to Kubernetes clusters for staging and production environments.
 
-<p>Hosting the application on Azure Web App to ensure scalability, availability, and cloud integration.</p>
+- Hosting the application on Azure Web App to ensure scalability, availability, and cloud integration.</p>
 
 <p>This project serves as a comprehensive learning resource for understanding how software development integrates with DevOps tools and cloud-native deployment strategies.</p>
-            <p>My appreciation goes to my mentor <a href = "https://www.linkedin.com/in/rgmh/"> Raphael Gab-Momoh(MVP) </a> and <a href = "https://www.linkedin.com/in/oladiranolalekan/"> Olalekan OLADIRAN </a> for the time they have invested in sharing their knowledge, providing clarity when things seemed complex, and pushing me to keep improving. Your support has made a real difference, and I am grateful to have learned from such dedicated and inspiring coaches.</p>
-            <p>Thank you for being part of this journey — I am excited to keep building on what you have taught me.</p>
+            <p>My appreciation goes to my mentor [Raphael Gab-Momoh(MVP)](https://www.linkedin.com/in/rgmh/)[Olalekan OLADIRAN](https://www.linkedin.com/in/oladiranolalekan/)for the time they’ve invested in sharing their knowledge, providing clarity when things seemed complex, and pushing me to keep improving. Your support has made a real difference, and I’m grateful to have learned from such dedicated and inspiring coaches.</p>
+            <p>Thank you for being part of this journey — I’m excited to keep building on what you’ve taught me.</p>
 
-          
+
           <h2>Available Endpoints:</h2>
           <div class="endpoint">
             <strong>GET /</strong> - This welcome page
