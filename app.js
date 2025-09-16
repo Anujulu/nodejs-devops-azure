@@ -42,7 +42,7 @@ const server = http.createServer((req, res) => {
         </head>
         <body>
           <div class="header">
-            <h1> Node.js, DevOps, Pipeline, Docker, CI/CD, Kubernetes, Azure </h1>
+            <h1> Node.js, DevOps, Pipeline, Docker, CI/CD, Kubernetes, Azure Web Apps </h1>
             <h2>Built by Izuabueke</h2>
             </div>
             <p>This project demonstrates a complete end-to-end DevOps workflow by building and deploying a modern <b>Node.js web application</b>. It covers the full lifecycle of application development, from writing and testing code, to containerizing with <b>Docker</b>, automating pipelines with <b>GitHub Actions</b>, and deploying workloads to <b>Kubernetes</b> environments for both staging and production.
@@ -62,8 +62,8 @@ As part of this implementation, the application is also <b>hosted on Azure Web A
 <p>Hosting the application on Azure Web App to ensure scalability, availability, and cloud integration.</p>
 
 <p>This project serves as a comprehensive learning resource for understanding how software development integrates with DevOps tools and cloud-native deployment strategies.</p>
-            <p>My appreciation goes to my mentor [Raphael Gab-Momoh(MVP)](https://www.linkedin.com/in/rgmh/) and [Olalekan OLADIRAN](https://www.linkedin.com/in/oladiranolalekan/) for the time they have invested in sharing their knowledge, providing clarity when things seemed complex, and pushing me to keep improving. Your support has made a real difference, and I am grateful to have learned from such dedicated and inspiring coaches.</p>
-            <p>Thank you for being part of this journey — I am excited to keep building on what you have taught me.</p>
+            <p>My appreciation goes to my mentor <a href=https://www.linkedin.com/in/rgmh/>Raphael Gab-Momoh(MVP)</a> and <a href=https://www.linkedin.com/in/oladiranolalekan/>Olalekan OLADIRAN</a> for the time they have invested in sharing their knowledge, providing clarity when things seemed complex, and pushing me to keep improving. Your support has made a real difference, and I am grateful to have learned from such dedicated and inspiring coaches.</p>
+            <p>Thank you for being part of this journey,  I am excited to keep building on what you have taught me.</p>
 
 
           <h2>Available Endpoints:</h2>
